@@ -51,6 +51,13 @@ export class AppComponent implements AfterViewInit {
       this.generateRandom(window.innerHeight - 200)
     );
   }
+  drawTickMark() {
+    this.shape.drawTickMark(
+      this.canvas,
+      this.generateRandom(window.innerWidth - 200),
+      this.generateRandom(window.innerHeight - 200)
+    );
+  }
   generateRandom(maxLimit: number) {
     let rand = Math.random() * maxLimit;
 

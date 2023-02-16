@@ -44,4 +44,17 @@ export class ShapeServiceService {
       })
     );
   }
+  drawTickMark(canvas:any,left:number,right:number) {
+    let pathLine = "M "+1093+" "+984+ " L "+(1093-12)+" "+(984-12)+ " L "+(1093+80)+" "+(984-50);
+    canvas.add(
+      new fabric.Path(pathLine, {
+        strokeLineJoin: 'round',
+        strokeWidth: 2,
+        stroke: 'red',
+        fill:"",
+        left: left,
+        top: right,
+      })
+    );
+  }
 }
