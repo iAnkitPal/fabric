@@ -58,4 +58,7 @@ export class AppComponent implements AfterViewInit {
 
     return rand;
   }
+  clearCanvas() {
+    this.canvas.clear();
+  }
 }
