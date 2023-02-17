@@ -1,18 +1,15 @@
-
-
 <div id="wrapper" #wrapper>
   <div #buildZone id="buildZone">
-    <canvas id="canvas" #canvas></canvas>
+    <span (click)="cords.x = $event.x;cords.y = $event.y" [class.border]="selectedId">
+      <canvas id="canvas" #canvas></canvas>
+
+    </span>
     <div id="controls">
-      <button id="square" (click)="drowRectangle()">Rect</button>
-      <button id="circle" (click)="drowCirle()">Circle</button>
-      <button id="triangle" (click)="drowTriangle()">Triangle</button>
-      <button id="triangle" (click)="drawTickMark()">Tic Mark</button>
-      <button id="triangle" (click)="drawCrossMark()">Cross Mark</button>
-      <button id="triangle" (click)="drawQuesMark()">Question Mark</button>
-      <button id="clear" (click)="clearCanvas()">Clear</button>
+      <button *ngFor="let item of shapesBtns" [disabled]="item.id == selectedId" (click)="selectedId = item.id" >{{item.name}}</button>
+      <button type="button" (click)="selectedId = 0">Clear</button>
     </div>
   </div>
+  <span *ngIf="selectedId">Mouse Activated.{{cords | json }}</span>
   <div id="styleZone" #styleZone></div>
 </div>
 

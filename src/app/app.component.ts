@@ -8,7 +8,40 @@ import { ShapeServiceService } from 'src/services/shape-service.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  title = 'fabric';
+  selectedId?:number;
+  cords:any= {x:null,y:null};
+  shapesBtns = [
+    {
+    funName:this.drowRectangle,
+    id:1,
+    name:'Rectangle'
+  },
+  {
+    funName:this.drowCirle,
+    id:2,
+    name:'Circle'
+  },
+  {
+    funName:this.drowTriangle,
+    id:3,
+    name:'Triangle'
+  },
+  {
+    funName:this.drawTickMark,
+    id:4,
+    name:'Tick Mark'
+  },
+  {
+    funName:this.drawCrossMark,
+    id:5,
+    name:'CrossMark'
+  },
+  {
+    funName:this.drawQuesMark,
+    id:6,
+    name:'Ques Mark'
+  },
+];
 
   canvas: any;
   constructor(private shape: ShapeServiceService) {}
