@@ -5,8 +5,8 @@
 
     </span>
     <div id="controls">
-      <button *ngFor="let item of shapesBtns" [disabled]="item.id == selectedId" (click)="selectedId = item.id" >{{item.name}}</button>
-      <button type="button" (click)="selectedId = 0">Clear </button>
+      <button *ngFor="let item of shapesBtns" (click)="getSelectedButton(item.id)">{{item.name}}</button>
+      <button id="clear" (click)="clearCanvas()">Clear</button>
     </div>
   </div>
   <span *ngIf="selectedId">Mouse Activated.{{cords | json }}</span>
