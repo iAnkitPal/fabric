@@ -23,6 +23,7 @@ export class ShapeServiceService {
         height: 50,
         left: left,
         top: top,
+        selectable:false
       })
     );
   }
@@ -43,6 +44,7 @@ export class ShapeServiceService {
         fill: fill,
         left: x,
         top: y,
+        selectable:false
       })
     );
   }
@@ -65,6 +67,7 @@ export class ShapeServiceService {
         height: rectHeight,
         left: left,
         top: right,
+        selectable:false
       })
     );
   }
@@ -90,6 +93,7 @@ export class ShapeServiceService {
         fill: '',
         left: left,
         top: right,
+        selectable:false
       })
     );
   }
@@ -119,6 +123,7 @@ export class ShapeServiceService {
         fill: '',
         left: left,
         top: right,
+        selectable:false
       })
     );
   }
@@ -134,7 +139,8 @@ export class ShapeServiceService {
         left: left,
         top: right,
         scaleX: 0.65,
-        scaleY: 0.65
+        scaleY: 0.65,
+        selectable:false
       })
     );
   }
