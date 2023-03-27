@@ -52,7 +52,9 @@ export class AppComponent implements AfterViewInit {
     this.canvas = new fabric.Canvas('canvas', {
       width: window.innerWidth - 100,
       height: window.innerHeight - 100,
+      backgroundImage:'https://html.sammy-codes.com/images/background.jpg'
     });
+    this.canvas.setBackgroundImage('https://html.sammy-codes.com/images/background.jpg',(x:any)=> console.log(x));
     this.canvas.on('mouse:down', this.onMouseDown);
     this.canvas.on('mouse:move', this.onMouseMove);
     this.canvas.on('mouse:up', this.onMouseUp);
